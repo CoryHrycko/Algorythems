@@ -52,7 +52,8 @@ let pathing =function(n){
             grid.toggle(i,j);
         }
     };
-    return 
+    findPaths(0,0);
+    return paths;
 };
 
 
