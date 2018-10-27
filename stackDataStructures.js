@@ -24,3 +24,10 @@ for(let i = 0; i < word.length; i++) {
 for(let i = 0; i<word.length; i++){
     rword+=letters.pop();
 }
+
+if(word===rword){
+    console.log(word + ' this is the same going backwards as forwards');
+}
+else{
+    console.log('nope, '+word+'not one.');
+}
