@@ -31,3 +31,34 @@ if(word===rword){
 else{
     console.log('nope, '+word+'not one.');
 }
+/*  moving on to functions as stacks*/
+//create the main function
+let Stack = function(){
+    this.count = 0;
+    this.storage={};
+
+
+    //adds value to end of stack
+this.push = function(value){
+    this.storage[this.count] = value;
+    this.count++;
+}
+
+
+
+//removes values at the end
+this.pop = function(){
+    if(this.count ===o){
+        return undefined;
+    }
+
+    this.count--;
+    let result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+}
+this.size=function(){
+    
+}
+
+}
