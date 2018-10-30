@@ -1,13 +1,16 @@
-/* A linked list is an alternative to array*/
+/* A linked list is an alternative to array
 
 
 
+
+
+*/
 let LinkedList = function() {
     this.head = null;
     this.tail = null;
     this.size =0;
 }
-
+/* this is the add function so the test can move the testing functions up to the next object.*/
 LinkedList.prototype.add = function(obj) {
     if(!this.head){
         this.head = obj;
@@ -19,7 +22,7 @@ LinkedList.prototype.add = function(obj) {
     this.tail = obj;
     this.size ++;
 }
-
+/* this is the subtraction method to slow down the slow test*/
 LinkedList.prototype.removeHead = function(){
     if(!this.head) return false;
     let head = this.head.value;
@@ -33,6 +36,7 @@ LinkedList.prototype.removeHead = function(){
     this.size --;
     return head;
 }
+/* this is specifically outlining the test*/
 LinkedList.prototype.hasCycle = (() => {
     let fast = this.head;
     let slow = this.head;
