@@ -58,7 +58,7 @@ this.pop = function(){
     return result;
 }
 this.size=function(){
-    
+    return
 }
 
 }
