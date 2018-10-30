@@ -1,3 +1,7 @@
+/* A linked list is an alternative to array*/
+
+
+
 let LinkedList = function() {
     this.head = null;
     this.tail = null;
@@ -29,10 +33,18 @@ LinkedList.prototype.removeHead = function(){
     this.size --;
     return head;
 }
-LinkedList.prototype.hasCycle = funtion(){
+LinkedList.prototype.hasCycle = (() => {
     let fast = this.head;
     let slow = this.head;
-}
+    let pause = true;
+
+    while(fast = fast.next){
+        if(fast===slow) return true;
+        if(!pause) slow = slow.next;
+        pause=!pause;
+    }
+    return false;
+});
 
 
 
