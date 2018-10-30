@@ -50,9 +50,28 @@ LinkedList.prototype.hasCycle = (() => {
     return false;
 });
 
+/*------------------------------------------this is some test variables-*/
 
 
+let peanutBat={
+    value:"chewy",
+    next: null
+};
+let peanuts={
+    value:"salty",
+    next: null
+};
+let jalepenos={
+    value:"spicey",
+    next: null
+};
 
+let maple = new LinkedList();
+maple.add(peanutBat);
+maple.add(peanuts);
+maple.hasCycle();
+maple.add(jalepenos);
+maple.hasCycle();
 
 
 
