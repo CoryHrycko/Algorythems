@@ -19,7 +19,62 @@ function mySet() {
     }
         return false;
     });
-}
+    // removes element from the set
+    this.remove = ((element)=>{
+        if(!this.has(element)){    
+            index = collection.indexOf(element);
+            collection.splice(index,1);
+            return true;
+        }
+        return false;
+    });
+    //return size
+    this.size = function(){
+        return collection.length;
+    };
+    //union join
+    this.union= function(otherSet){
+        //defines variables taken
+        let unionSet = new mySet();
+        let firstSet = this.values();
+        let secondSet = otherSet.values();
+        //sets up the method in which we stor the orgi numbs
+        firstSet.forEach((e) => {
+            unionSet.add(e);
+        });
+        //sets up and concatenates the second set
+        secondSet.forEach((e) => {
+            unionSet.add(e);
+        });
+        return unionSet;
+    }
+    //intersection
+    this.intersection = function(otherSet){
+        let intersectionSet = new mySet();
+        let firstSet = this.value();
+        firstSet.forEach((e)=>{
+            if(otherSet.has(e)){
+                intersectionSet.add(e);
+            }
+        });
+        return IntersectionSet;
+    };
+    //difference method
+    this.difference= function(otherSet){
+        let differenceSet = new mySet();
+        let firstSet = this.values();
+        firstSet.forEach((e)=>{
+            if(!otherSet.has(e)){
+                differenceSet.add(e);
+            }
+        })
+    }
+
+
+
+
+
+};
 
 
 
