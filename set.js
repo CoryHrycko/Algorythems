@@ -48,7 +48,7 @@ function mySet() {
         });
         return unionSet;
     }
-    //intersection
+    //intersection all the values in both set full join
     this.intersection = function(otherSet){
         let intersectionSet = new mySet();
         let firstSet = this.value();
@@ -67,16 +67,26 @@ function mySet() {
             if(!otherSet.has(e)){
                 differenceSet.add(e);
             }
-        })
+        });
+        return differenceSet;
     }
-
-
-
-
-
+    //subsetting
+    this.subSet = function(otherSet){
+        let firstSet = this.values();
+        return firstSet.every((value)=>{
+            return otherSet.has(value);
+        });
+    };
 };
 
-
+let setA = new mySet();
+let setB = new mySet();
+setA.add("a");
+setA.add("b");
+setA.add("c");
+setA.add("a");
+setA.add("d");
+console.log(setA.subSet(setB));
 
 
 
