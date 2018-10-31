@@ -82,12 +82,12 @@ function mySet() {
 let setA = new mySet();
 let setB = new mySet();
 setA.add("a");
-setA.add("b");
-setA.add("c");
-setA.add("a");
-setA.add("d");
+setB.add("b");
+setB.add("c");
+setB.add("a");
+setB.add("d");
 console.log(setA.subSet(setB));
-
+console.log(setA.intersection(setB).values());
 
 
 
