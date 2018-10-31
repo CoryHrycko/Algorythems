@@ -48,7 +48,7 @@ this.push = function(value){
 
 //removes values at the end
 this.pop = function(){
-    if(this.count ===o){
+    if(this.count ===0){
         return undefined;
     }
 
