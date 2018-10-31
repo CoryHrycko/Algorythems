@@ -58,7 +58,18 @@ this.pop = function(){
     return result;
 }
 this.size=function(){
-    return
+    return this.count;
+}
+//end value returned.
+this.peek=function(){
+    return this.storage[this.count-1];
+}
 }
 
-}
+let myStack = new Stack();
+
+myStack.push(1);
+myStack.push(2);
+console.log(myStack.peek);
+console.log(myStack.pop);
+console.log(myStack.peek);
